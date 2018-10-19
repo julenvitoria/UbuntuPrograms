@@ -1,0 +1,11 @@
+pasar todos los archivos a cualquier carpeta
+acceder via terminal a la carpeta donde estan los archivos
+teclear:
+
+chmod +x init.sh
+
+ejectar con:
+
+sudo init.sh
+
+
