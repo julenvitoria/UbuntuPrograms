@@ -14,6 +14,10 @@ sudo dpkg -i megasync-xUbuntu_16.04_amd64.deb
 sudo apt-get -f install
 sudo gdebi teamviewer_13.0.9865_amd64.deb
 
+#GitHub Desktop
+sudo apt-get -y install libsecret-1-dev g++-4.8 gcc-4.8
+sudo gdebi GitHubDesktop-linux-amd64-1.4.2-linux1.deb
+
 #Kodi
 sudo apt-get -y install software-properties-common
 sudo add-apt-repository -y ppa:team-xbmc/ppa
