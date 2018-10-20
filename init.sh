@@ -1,7 +1,8 @@
-#!/bin/bash
+s#!/bin/bash
 
 #Varios
 sudo apt-get update
+sudo apt-get -y install kate
 sudo apt-get -y install net-tools
 sudo apt-get -y install gdebi-kde
 sudo apt-get -y install synaptic
@@ -25,9 +26,14 @@ sudo apt-get update
 sudo apt-get -y install kodi
 
 #Telegram
-sudo add-apt-repository -y ppa:atareao/telegram
-sudo apt-get update
-sudo apt-get -y install telegram
+#Antigua forma: sudo add-apt-repository -y ppa:atareao/telegram
+#Antigua forma: sudo apt-get update
+#Antigua forma: sudo apt-get -y install telegram
+echo "#############################################ATENCION############################################"
+echo "Para proseguir con la instalacion cerrar (no minimizar) Telegram Desktop una vez que haya cargado"
+echo "#############################################ATENCION############################################"
+sudo cp Telegram /home
+sudo /home/Telegram
 
 #Pishrink
 wget https://raw.githubusercontent.com/Drewsif/PiShrink/master/pishrink.sh
@@ -45,6 +51,12 @@ echo 'deb http://repo.acestream.org/ubuntu/ trusty main' | sudo tee /etc/apt/sou
 sudo wget -O - http://repo.acestream.org/keys/acestream.public.key | sudo apt-key add -
 sudo apt-get update
 sudo apt-get -y install acestream-full
+echo "#############################################ATENCION###########################################"
+echo "             Para parar el motor acestream una vez haya arrancado pulsar Control - C            "
+echo "#############################################ATENCION###########################################"
+acestreamengine --client-console
+
+
 
 #En algunos casos es necesario iniciar el servicio acestream-engine.service,
 #para ello ejecutemos los siguientes comandos desde la terminal:
@@ -52,6 +64,10 @@ sudo apt-get -y install acestream-full
 #systemctl enable acestream-engine.service
 #start-engine --client-console
 #acestreamengine --client-console
+
+#Etcher
+#para instalar Etcher, mover la aplicacion al escritorio por ejemplo y ejecutarla desde ahi
+#con doble click o abriendo terminal y tecleando el comando ./etcher-electron-1.4.5-x86_64.AppImage
 
 #RetroPie
 #ATENCION  tarda 1h o mas en instalarse
