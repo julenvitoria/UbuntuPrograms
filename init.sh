@@ -1,4 +1,4 @@
-s#!/bin/bash
+#!/bin/bash
 
 #Varios
 sudo apt-get update
